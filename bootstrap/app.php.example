@@ -1,0 +1,10 @@
+<?php
+// Tambahkan konfigurasi alias middleware berikut ke bootstrap/app.php project Laravel 13.
+// Jangan mengganti seluruh bootstrap/app.php bawaan. Sisipkan ->withMiddleware(...)
+use Illuminate\Foundation\Configuration\Middleware;
+
+->withMiddleware(function (Middleware $middleware): void {
+    $middleware->alias([
+        'admin.login' => \App\Http\Middleware\EnsureAdminLogin::class,
+    ]);
+})

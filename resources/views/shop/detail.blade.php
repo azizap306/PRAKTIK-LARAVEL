@@ -1,0 +1,1 @@
+@extends('layouts.app') @section('content')<div class="card shadow-sm"><div class="card-body p-4"><span class="text-secondary">Detail produk</span><h1>{{ $name }}</h1><h3 class="text-primary">Rp {{ number_format($harga,0,',','.') }}</h3><a href="/product" class="btn btn-outline-primary">Kembali ke produk</a></div></div>@endsection
